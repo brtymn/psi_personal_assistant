@@ -2,12 +2,7 @@
 
 import getpass
 
-get_user_name = getpass.getuser()
-
-
 def Greet():
+    get_user_name = getpass.getuser()
     print(".---.| Ψ |'---'")
-    print("Greetings, {}. How can I help?".format(get_user_name))
-
-
-Greet()
+    print("Hello, {}. My name is Psi. I am a terminal based assitant.".format(get_user_name))
