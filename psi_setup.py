@@ -64,6 +64,10 @@ def reactPsi(command):
         talk("Here is Reddit.\n")
         webbrowser.open_new("https://www.reddit.com/")
 
+    elif 'netflix' in command:
+        talk("Here is Netflix.\n")
+        webbrowser.open_new("https://www.netflix.com/browse")
+
     elif 'Exit' in command:
         talk("Psi deactivating now.")
         time.sleep(4)
