@@ -44,7 +44,7 @@ def PlayVideo():
             break
         if cv2.waitKey(28) & 0xFF == ord("q"):
             break
-        cv2.imshow("Video", frame)
+        cv2.imshow("Psi Video Player", frame)
         if val != 'eof' and audio_frame is not None:
             #audio
             img, t = audio_frame
