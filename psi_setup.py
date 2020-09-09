@@ -19,6 +19,7 @@ from psi_greet import Greet
 from psi_find_file import find_files
 from psi_plot_file import plot_single_file
 from cideo_player_for_psi import PlayVideo
+from cartoonify_psi import Cartoonify
 
 Greet()
 
@@ -83,6 +84,10 @@ def reactPsi(command):
     elif 'play me a video' in command:
         talk("Psi will find and play your video.")
         PlayVideo()
+
+    elif 'cartoonify an image' in command:
+        talk("Psi will find and cartoonify your image")
+        Cartoonify()
 
 
     elif 'plot this file' in command:
