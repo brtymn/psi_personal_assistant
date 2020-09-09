@@ -16,6 +16,9 @@ import webbrowser
 
 
 from psi_greet import Greet
+from psi_find_file import find_files
+from psi_plot_file import plot_single_file
+from cideo_player_for_psi import PlayVideo
 
 Greet()
 
@@ -67,6 +70,31 @@ def reactPsi(command):
     elif 'netflix' in command:
         talk("Here is Netflix.\n")
         webbrowser.open_new("https://www.netflix.com/browse")
+
+    elif 'find me a file' in command:
+        talk("Psi will look for your file now. \n")
+        time.sleep(3)
+        talk("Enter the file name and search directory.\n")
+        filename = input("File Name:    ")
+        search_path = input("Search Directory:    ")
+        find_files(filename, search_path)
+        talk("Here is the path to your file.")
+
+    elif 'play me a video' in command:
+        talk("Psi will find and play your video.")
+        PlayVideo()
+
+
+    elif 'plot this file' in command:
+        talk("Psi will plot the two colums in your file.")
+        talk("Enter the path to the file.")
+        path_to_file = input("Path:    ")
+        plot_single_file(path_to_file)
+
+    elif 'Thanks' in command:
+        talk("Psi is happy to help. \n")
+
+
 
     elif 'Exit' in command:
         talk("Psi deactivating now.")
