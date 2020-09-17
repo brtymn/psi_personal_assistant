@@ -18,6 +18,7 @@ import webbrowser
 from psi_greet import Greet
 from psi_find_file import find_files
 from psi_plot_file import plot_single_file
+from psi_speed_test import speed_test
 from cideo_player_for_psi import PlayVideo
 from cartoonify_psi import Cartoonify
 from display_help_psi import DisplayHelp
@@ -56,6 +57,10 @@ def reactPsi(command):
     elif 'help me' in command:
         talk("Here is a list of commands.")
         DisplayHelp()
+
+    elif 'speedtest' in command:
+        talk("Running an internet connection speed test.")
+        speed_test()
 
     elif 'youtube' in command:
         talk("Here is Youtube.\n")
