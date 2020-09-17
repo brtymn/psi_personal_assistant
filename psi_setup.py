@@ -18,6 +18,9 @@ import webbrowser
 from psi_greet import Greet
 from psi_find_file import find_files
 from psi_plot_file import plot_single_file
+from cideo_player_for_psi import PlayVideo
+from cartoonify_psi import Cartoonify
+from display_help_psi import DisplayHelp
 
 Greet()
 
@@ -50,6 +53,10 @@ def reactPsi(command):
     if 'Hello' in command:
         talk('Hello! I am Psi. How can I help you?')
 
+    elif 'help me' in command:
+        talk("Here is a list of commands.")
+        DisplayHelp()
+
     elif 'youtube' in command:
         talk("Here is Youtube.\n")
         webbrowser.open_new("https://www.youtube.com")
@@ -79,6 +86,15 @@ def reactPsi(command):
         find_files(filename, search_path)
         talk("Here is the path to your file.")
 
+    elif 'play me a video' in command:
+        talk("Psi will find and play your video.")
+        PlayVideo()
+
+    elif 'cartoonify an image' in command:
+        talk("Psi will find and cartoonify your image")
+        Cartoonify()
+
+
     elif 'plot this file' in command:
         talk("Psi will plot the two colums in your file.")
         talk("Enter the path to the file.")
@@ -101,6 +117,7 @@ def reactPsi(command):
 
 
 talk('Hey, Psi is ready! What do you need?')
+print("Use the command 'help' to see the command list.")
 
 
 while True:
